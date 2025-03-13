@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Ontario_Housing_Dashboard' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Ontario housing data' inline='true' name='federated.1b6b8sc0hs3wll1axni501ck9p3l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Ontario housing data' name='textscan.0jlhzum1xj9yyg187vjlc1xb3ctt'>
+            <connection class='textscan' directory='C:/Users/kaurp/visualization/02_activities/assignments' filename='Ontario housing data.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0jlhzum1xj9yyg187vjlc1xb3ctt' name='Ontario housing data.csv' table='[Ontario housing data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='_id' ordinal='0' />
+            <column datatype='string' name='Municipality' ordinal='1' />
+            <column datatype='integer' name='Ten-year housing target' ordinal='2' />
+            <column datatype='integer' name='Total housing progress since 2022' ordinal='3' />
+            <column datatype='integer' name='Target for 2024' ordinal='4' />
+            <column datatype='integer' name='Total 2024 housing progress' ordinal='5' />
+            <column datatype='real' name='Progress % for 2024' ordinal='6' />
+            <column datatype='string' name='Housing Target Status' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[_id]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Municipality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Municipality]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Municipality</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ten-year housing target</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ten-year housing target]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Ten-year housing target</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total housing progress since 2022</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total housing progress since 2022]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Total housing progress since 2022</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Target for 2024</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Target for 2024]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Target for 2024</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total 2024 housing progress</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total 2024 housing progress]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Total 2024 housing progress</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Progress % for 2024</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Progress % for 2024]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Progress % for 2024</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Housing Target Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Housing Target Status]</local-name>
+            <parent-name>[Ontario housing data.csv]</parent-name>
+            <remote-alias>Housing Target Status</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Top/Bottom Flag' datatype='integer' name='[Calculation_702561596761100289]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK(SUM([Progress % for 2024]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Rank Progress' datatype='integer' name='[Calculation_702561596765143042]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK(SUM([Progress % for 2024]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Housing Target Status]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Municipality]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='integer' hidden='true' name='[Target for 2024]' role='measure' type='quantitative' />
+      <column caption='Ontario housing data.csv' datatype='table' name='[__tableau_internal_object_id__].[Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B]' role='measure' type='quantitative' />
+      <column caption='_Id' datatype='integer' name='[_id]' role='dimension' type='ordinal' />
+      <column-instance column='[Housing Target Status]' derivation='None' name='[none:Housing Target Status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Municipality]' derivation='None' name='[none:Municipality:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_03jkv2e0kl35fp14nkuwx094vh4s.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Municipality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Municipality]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Municipality</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ten-year housing target</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Ten-year housing target]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ten-year housing target</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total housing progress since 2022</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total housing progress since 2022]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total housing progress since 2022</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Target for 2024</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Target for 2024]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Target for 2024</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total 2024 housing progress</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total 2024 housing progress]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total 2024 housing progress</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Progress % for 2024</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Progress % for 2024]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Progress % for 2024</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Housing Target Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Housing Target Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Housing Target Status</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Ontario housing data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Municipality:nk]' palette='color_blind_10_0' type='palette'>
+            <map to='#1170aa'>
+              <bucket>&quot;Chatham-Kent&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Caledon&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;New Tecumseth&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Whitchurch-Stouffville&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ajax&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Kawartha Lakes&quot;</bucket>
+            </map>
+            <map to='#57606c'>
+              <bucket>&quot;Oakville&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bradford West Gwillimbury&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Markham&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Vaughan&quot;</bucket>
+            </map>
+            <map to='#5fa2ce'>
+              <bucket>&quot;Pickering&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;East Gwillimbury&quot;</bucket>
+            </map>
+            <map to='#7b848f'>
+              <bucket>&quot;Sault Ste. Marie&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Cambridge&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Newmarket&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Brampton&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Waterloo&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hamilton&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Richmond Hill&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Aurora&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Kingston&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;St. Catharines&quot;</bucket>
+            </map>
+            <map to='#a3acb9'>
+              <bucket>&quot;North Bay&quot;</bucket>
+            </map>
+            <map to='#a3cce9'>
+              <bucket>&quot;Thunder Bay&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Haldimand County&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Peterborough City&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Brantford&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mississauga&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Georgina&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Sarnia&quot;</bucket>
+            </map>
+            <map to='#c8d0d9'>
+              <bucket>&quot;Windsor&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Greater Sudbury&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Oshawa&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Halton Hills&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Innisfil&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Niagara Falls&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Woodstock&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Burlington&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Municipalities without targets&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Whitby&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Barrie&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kitchener&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Guelph&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Ottawa&quot;</bucket>
+            </map>
+            <map to='#fc7d0b'>
+              <bucket>&quot;Milton&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Clarington&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Norfolk County&quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Welland&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Belleville&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;London&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Toronto&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Housing Target Status:nk]' palette='color_blind_10_0' type='palette'>
+            <map to='#1170aa'>
+              <bucket>&quot;Exceeded&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Not met&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Not applicable&quot;</bucket>
+            </map>
+            <map to='#fc7d0b'>
+              <bucket>&quot;On track&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Ontario housing data.csv' id='Ontario housing data.csv_14E2E77B906A417980B3029EABCCE95B'>
+            <properties context=''>
+              <relation connection='textscan.0jlhzum1xj9yyg187vjlc1xb3ctt' name='Ontario housing data.csv' table='[Ontario housing data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='integer' name='_id' ordinal='0' />
+                  <column datatype='string' name='Municipality' ordinal='1' />
+                  <column datatype='integer' name='Ten-year housing target' ordinal='2' />
+                  <column datatype='integer' name='Total housing progress since 2022' ordinal='3' />
+                  <column datatype='integer' name='Target for 2024' ordinal='4' />
+                  <column datatype='integer' name='Total 2024 housing progress' ordinal='5' />
+                  <column datatype='real' name='Progress % for 2024' ordinal='6' />
+                  <column datatype='string' name='Housing Target Status' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight1' name='[Action1_8FBFF44AD22C4E338011C1C52F593E54]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Highlight Municipality' name='[Action2_BC64B38062FB47F594647E6A2D124999]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Geographical Distribution of 2024 Housing Progress in Ontario' />
+      <command command='tsc:brush'>
+        <param name='exclude' value='Geographical Distribution of 2024 Housing Progress in Ontario' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Bottom 10 Municipalities by 2024 Housing Progress'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#e15759' fontsize='11'>Bottom 10 Municipalities by 2024 Housing Progress</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ontario housing data' name='federated.1b6b8sc0hs3wll1axni501ck9p3l' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1b6b8sc0hs3wll1axni501ck9p3l'>
+            <column datatype='string' name='[Housing Target Status]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Municipality]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='real' name='[Progress % for 2024]' role='measure' type='quantitative' />
+            <column-instance column='[Housing Target Status]' derivation='None' name='[none:Housing Target Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Municipality]' derivation='None' name='[none:Municipality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Progress % for 2024]' derivation='Sum' name='[sum:Progress % for 2024:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]'>
+            <groupfilter count='10' end='bottom' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Progress % for 2024])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Municipality:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]' />
+              <text column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]</rows>
+        <cols>([federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk] / [federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk])</cols>
+      </table>
+      <simple-id uuid='{FF68AF41-B853-4DBF-8388-2DE43EAADBAE}' />
+    </worksheet>
+    <worksheet name='Geographical Distribution of 2024 Housing Progress in Ontario'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#59a14f' fontname='Inter' fontsize='10'>Geographical Distribution of 2024 Housing Progress in Ontario</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#404040' fontname='Inter' fontsize='10'>Click on a municipality in the map to highlight it in the top and bottom performers charts</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ontario housing data' name='federated.1b6b8sc0hs3wll1axni501ck9p3l' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1b6b8sc0hs3wll1axni501ck9p3l'>
+            <column datatype='string' name='[Housing Target Status]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Municipality]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='real' name='[Progress % for 2024]' role='measure' type='quantitative' />
+            <column-instance column='[Housing Target Status]' derivation='None' name='[none:Housing Target Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Municipality]' derivation='None' name='[none:Municipality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Progress % for 2024]' derivation='Sum' name='[sum:Progress % for 2024:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Housing Target Status:nk]' member='&quot;Exceeded&quot;' />
+              <groupfilter function='member' level='[none:Housing Target Status:nk]' member='&quot;Not applicable&quot;' />
+              <groupfilter function='member' level='[none:Housing Target Status:nk]' member='&quot;Not met&quot;' />
+              <groupfilter function='member' level='[none:Housing Target Status:nk]' member='&quot;On track&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[Longitude (generated)]' field-type='quantitative' max='-5336816.492067107' min='-10885789.125181682' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[Latitude (generated)]' field-type='quantitative' max='7424370.4847418228' min='4230541.7618974885' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk]' />
+              <text column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]' />
+              <lod column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]' />
+              <size column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Municipality:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Progress % for 2024:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[Housing Target Status: <[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[Latitude (generated)]</rows>
+        <cols>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{A3618BEE-7F87-4D31-A7AE-6B3D15D702C6}' />
+    </worksheet>
+    <worksheet name='Top 10 Municipalities by 2024 Housing Progress'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#499894' fontsize='11'>Top 10 Municipalities by 2024 Housing Progress</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ontario housing data' name='federated.1b6b8sc0hs3wll1axni501ck9p3l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b6b8sc0hs3wll1axni501ck9p3l'>
+            <column datatype='string' name='[Housing Target Status]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Municipality]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='real' name='[Progress % for 2024]' role='measure' type='quantitative' />
+            <column-instance column='[Housing Target Status]' derivation='None' name='[none:Housing Target Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Municipality]' derivation='None' name='[none:Municipality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Progress % for 2024]' derivation='Sum' name='[sum:Progress % for 2024:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Progress % for 2024])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Municipality:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]' />
+              <text column='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b6b8sc0hs3wll1axni501ck9p3l].[sum:Progress % for 2024:qk]</rows>
+        <cols>([federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk] / [federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk])</cols>
+      </table>
+      <simple-id uuid='{62907B67-85E4-4440-BF58-C53A52248852}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#1b1b1b' fontname='Inter' fontsize='15'>Ontario Housing Progress: Geographical and Performance Overview</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='text-align' value='center' />
+          <format attr='background-color' value='#dfedeb' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='text-align' value='center' />
+        </style-rule>
+      </style>
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98140' id='11' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930'>
+            <zone fixed-size='63' h='8256' id='12' is-fixed='true' type-v2='title' w='97538' x='1231' y='930'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='261' h='30349' id='5' is-fixed='true' param='horz' type-v2='layout-flow' w='97538' x='1231' y='9186'>
+              <zone h='30349' id='3' type-v2='layout-basic' w='92615' x='1231' y='9186'>
+                <zone h='30349' id='1' name='Geographical Distribution of 2024 Housing Progress in Ontario' w='92615' x='1231' y='9186'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='32' h='30349' id='4' is-fixed='true' param='vert' type-v2='layout-flow' w='4923' x='93846' y='9186'>
+                <zone h='30349' id='9' type-v2='empty' w='4923' x='93846' y='9186'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='214' h='25814' id='13' is-fixed='true' name='Top 10 Municipalities by 2024 Housing Progress' w='97538' x='1231' y='39535'>
+              <layout-cache minheight='225' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='33721' id='14' name='Bottom 10 Municipalities by 2024 Housing Progress' w='97538' x='1231' y='65349'>
+              <layout-cache minheight='261' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{3CB9B9D9-0A58-43C6-B6E2-0894C1400EE8}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='Geographical Distribution of 2024 Housing Progress in Ontario'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Housing Target Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{28865BFA-0A41-42EF-830C-3FD6DAD5DFE9}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Bottom 10 Municipalities by 2024 Housing Progress' />
+        <viewpoint name='Geographical Distribution of 2024 Housing Progress in Ontario'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Municipalities by 2024 Housing Progress' />
+      </viewpoints>
+      <active id='-1' />
+      <device-preview selected='Desktop' visible='true'>
+        <device name='Fire HD 10' type='Tablet' />
+      </device-preview>
+      <simple-id uuid='{E0934B8D-0B40-4A5E-8904-DFB07CB67DF6}' />
+    </window>
+    <window class='worksheet' name='Top 10 Municipalities by 2024 Housing Progress'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]' type='color' />
+          </strip>
+          <strip size='160'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0C2FC641-D7ED-4A9F-A2E2-23B8979A6CE3}' />
+    </window>
+    <window class='worksheet' name='Bottom 10 Municipalities by 2024 Housing Progress'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1b6b8sc0hs3wll1axni501ck9p3l].[none:Municipality:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5A34463E-F9F7-4C27-8421-DDA9C62AD61E}' />
+    </window>
+  </windows>
+</workbook>
